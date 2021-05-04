@@ -1,0 +1,33 @@
+
+    <%- include("../templates/header.ejs") -%>
+
+    
+    <div class="container">
+        <div class=info> 
+            <div class="date"><%= date %></div>
+            <div class="time"><%= time %></div>
+        </div>
+        <div class="top">
+            <div class="temp">
+                <%= feels %>  
+                <p> <%= description %> </p>
+            </div>
+           <div class="icon"><img src="<%= icon_url %>"></div>
+        </div>
+        <div class="bottom">
+            <div class="location">
+                <%= cityname %> 
+                 <%= country %> <br>
+            </div>
+            <div class="search">
+                <form action="/" method="POST">
+                    <input type="text" name="city"  autocomplete="off">
+                    <button type="submit" name = "submit">Search</button>
+                    <i class="fas fa-search-location"></i>
+                </form><br>
+            </div>
+            
+        </div>
+    </div>
+
+    <%- include("../templates/footer.ejs") -%>
